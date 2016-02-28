@@ -1,29 +1,22 @@
+console.log("main running...");
+var URL = "https://blueprintapi.herokuapp.com/";
 $(document).ready(function(){
-    var PIRATE_URL = "http://isithackday.com/arrpi.php";
 
-    $("#description").click(function(e){
-        console.log("Descirption Clicked!");
+    $(".square").click(function(e){
+        console.log(e);
+        $(e.target).fadeOut();
+    });
 
+    $("#description").click(function() {
         var text = $("#description").text();
-
-        var data = {
-            format : "json",
-            text   : "hello"
+        console.log(text);
+        data = {
+            "text" : text
         };
-
-        $.get(PIRATE_URL, data, function(response) {
+        $.post(URL, data, function(response) {
             console.log(response);
-            if (response.success) {
-                $("#description").text(response.text);
-            }
-            else alert("Error translating text");
-
+            $("#description").text(response["translated"]);
         });
     });
 
-
-    $(".square").click(function(e) {
-        $(this).fadeOut();
-    });
 });
-
