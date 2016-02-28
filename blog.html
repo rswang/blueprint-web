@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- Import the TinyMCE editor library to make our textarea pretty -->
+    <script src="https://cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+    <!-- Import the Firebase library -->
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  </head>
+  <body>
+    <div id="banner_wrapper">
+      <img id="banner" src="http://upload.wikimedia.org/wikipedia/commons/6/6e/MIT's_Stata_Center.jpg"/>
+    </div>
+    <img id="profile" src="profilepic.jpeg" />
+    <h1>Doge</h1>
+    <p id="description">Hello, I'm Doge!</p>
+    <a href="about.html">About Me</a>
+    <a href="blog.html">Blog</a>
+
+    <div class="content">
+      <form>
+        <input type="text" id="title" placeholder="Title"/>
+        <br>
+        <textarea rows="20"></textarea>
+        <br>
+        <input type="submit" value="Publish"/>
+      </form>
+    </div>
+
+  </body>
+
+  <!-- Import JQuery and blog.js file -->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"> </script>
+  <script src="blog.js"> </script>
+
+</html>
